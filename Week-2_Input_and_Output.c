@@ -88,7 +88,7 @@ int main(void){
 
 #include "stm32f4xx.h"
 
-/* Simple software delay function
+/* Simple delay function
    ------------------------------------------------------------
    This creates a rough millisecond delay by running two loops.
    It is not precise but works well enough for visible LED timing.
@@ -188,10 +188,11 @@ int main(void){
 			GPIOC->BSRR |= GPIO_BSRR_BR5;   // PC5 OFF
 		}
 
-        /* Short final delay before restarting the loop
-           Makes the pattern easier to see.
+        /* Short delay before restarting the loop
+           makes the pattern easier to see.
 		   */
 
 		delay_ms(200);
 	}
 }
+
